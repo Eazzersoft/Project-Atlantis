@@ -55,7 +55,8 @@ namespace Hauptumgebung
         {
            
         }
-
+        AI ChatBot = new AI();
+        public static string output = "";
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             string argument = null;
@@ -64,6 +65,7 @@ namespace Hauptumgebung
                 if(!String.IsNullOrEmpty(argument))
                 {
                     argument = textBox1.Text;
+                    output = ChatBot.TextToCommand(argument);
                 }
             }
         }
