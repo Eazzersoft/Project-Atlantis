@@ -9,7 +9,7 @@ namespace Hauptumgebung
 {
     public class Sprachausgabe 
     {
-       public static SpeechSynthesizer synth = new SpeechSynthesizer();
+       Form1.synth.Speak
 
         
 

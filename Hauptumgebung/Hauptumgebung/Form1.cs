@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Synthesis;
 
 namespace Hauptumgebung
 {
@@ -15,8 +16,18 @@ namespace Hauptumgebung
         public Form1()
         {
             InitializeComponent();
-            Sprachausgabe.synth 
-            
+            public static SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.SetOutputToDefaultAudioDevice();
+
+
+
+
+
+
+
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
