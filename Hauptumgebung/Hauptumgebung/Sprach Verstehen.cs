@@ -10,15 +10,18 @@ namespace Hauptumgebung
     public static class Sprach_Verstehen
     {
 
-        public static void Sprachezutext(string[] args)
+        public static void Sprachezutext()
         {
+             
             SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine( new System.Globalization.CultureInfo("de-DE"));
+
+                                    
         }
 
-        static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        public static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             
-            if (e.Result.Text == "Hallo")
+            if (e.Result.Text == "e")
             {
                 Sprachausgabe.speech1();
             }

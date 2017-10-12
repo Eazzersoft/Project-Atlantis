@@ -16,7 +16,7 @@ namespace Hauptumgebung
 {
     public partial class Form1 : Form
     {
-        
+       public static int Spracherkennunganaus;
         
 
         public SpeechSynthesizer synth = new SpeechSynthesizer();
@@ -28,8 +28,10 @@ namespace Hauptumgebung
 
            Sprach_Verstehen.Sprachezutext();
 
-
-
+            if (Spracherkennunganaus == 1)
+            {
+                Sprach_Verstehen.Sprachezutext();
+            }
 
 
 
@@ -77,6 +79,21 @@ namespace Hauptumgebung
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Spracherkennunganaus = 1;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Spracherkennunganaus = 0;
+        }
+
+        public static void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
