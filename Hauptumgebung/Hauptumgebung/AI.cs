@@ -26,6 +26,7 @@ namespace Hauptumgebung
                 System.Diagnostics.Process.Start(software);
                 return software + "wurde gestartet.";
             }
+            // If it crashs
             catch (Exception e)
             {
                 return "Ein Fehler ist aufgetreten: " + e.Message;
@@ -34,10 +35,12 @@ namespace Hauptumgebung
         }
         private string Time()
         {
-            return "Es ist derzeit: " + DateTime.Now.ToString("h:mm:ss tt");
+            return "Es ist derzeit: " + System.DateTime.Now.ToString("h:mm:ss tt");
         }
-        private string Date()
-        { }
+        private string DateTime()
+        {
+            return "Heute ist der: " + System.DateTime.Now.ToString("M/d/yyyy");
+        }
             
 
     }
