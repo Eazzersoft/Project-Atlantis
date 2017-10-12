@@ -21,5 +21,37 @@ namespace Hauptumgebung
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            string argument = null;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if(!String.IsNullOrEmpty(argument))
+                {
+                    argument = textBox1.Text;
+                }
+            }
+        }
     }
 }
