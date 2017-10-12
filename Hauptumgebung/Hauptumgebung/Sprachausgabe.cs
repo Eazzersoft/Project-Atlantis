@@ -11,11 +11,10 @@ namespace Hauptumgebung
     {
         SpeechSynthesizer synth = new SpeechSynthesizer();
 
-       
+        
 
-
-
-
+        
+        
 
 
 
