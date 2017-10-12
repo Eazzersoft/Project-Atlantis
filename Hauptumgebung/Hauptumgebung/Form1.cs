@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
+using System.Diagnostics;
+
 
 namespace Hauptumgebung
 {
@@ -23,8 +25,8 @@ namespace Hauptumgebung
         {
             InitializeComponent();
             synth.SetOutputToDefaultAudioDevice();
-
             
+
 
 
 
