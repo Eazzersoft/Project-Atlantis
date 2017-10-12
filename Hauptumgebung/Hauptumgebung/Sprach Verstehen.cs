@@ -12,19 +12,20 @@ namespace Hauptumgebung
 
         static void Sprachezutext()
         {
-            SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine( new System.Globalization.CultureInfo("en-US"));
+            SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine( new System.Globalization.CultureInfo("de-DE"));
+        }
 
-
-
-
-
+        static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+            if (e.Result.Text == "Hallo")
+            {
+            
+            }
 
 
 
 
         }
-
-
 
     }
 }

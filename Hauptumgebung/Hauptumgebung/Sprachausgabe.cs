@@ -14,14 +14,26 @@ namespace Hauptumgebung
             Form1 frm = new Form1();
             frm.synth.Speak(Form1.output);
         }
-        
-        
 
-        
-        
+        void speech1()
+        {
+            Form1 frm = new Form1();
+            frm.synth.Speak("hallo");
+       }
 
 
+        void speech2()
+        {
+            Form1 frm = new Form1();
+            frm.synth.Speak("hallo");
+        }
 
+
+        void speech3()
+        {
+            Form1 frm = new Form1();
+            frm.synth.Speak("Hallo");
+        }
 
     }
 }
