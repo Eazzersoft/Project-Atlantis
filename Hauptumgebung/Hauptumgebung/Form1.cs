@@ -14,17 +14,17 @@ namespace Hauptumgebung
 {
     public partial class Form1 : Form
     {
-        public SpeechRecognitionEngine hörer = new SpeechRecognitionEngine();
         
+        
+
         public SpeechSynthesizer synth = new SpeechSynthesizer();
 
         public Form1()
         {
             InitializeComponent();
             synth.SetOutputToDefaultAudioDevice();
-
-
-
+            
+            
 
 
 

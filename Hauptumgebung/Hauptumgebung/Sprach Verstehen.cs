@@ -9,12 +9,20 @@ namespace Hauptumgebung
 {
     public class Sprach_Verstehen
     {
-        
+
+        static void Sprachezutext()
+        {
+            SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine( new System.Globalization.CultureInfo("en-US"));
 
 
 
 
 
+
+
+
+
+        }
 
 
 
