@@ -17,12 +17,27 @@ namespace Hauptumgebung
         }
         private bool search(String argument, ref string software)
         {
-            Char[] word = 
+            return false;
         }
-        private void run(string software)
+        private string RunSoftware(string software)
         {
+            try
+            {
+                System.Diagnostics.Process.Start(software);
+                return software + "wurde gestartet.";
+            }
+            catch (Exception e)
+            {
+                return "Ein Fehler ist aufgetreten: " + e.Message;
+            }
            
         }
+        private string Time()
+        {
+            return "Es ist derzeit: " + DateTime.Now.ToString("h:mm:ss tt");
+        }
+        private string Date()
+        { }
             
 
     }
