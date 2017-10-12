@@ -9,8 +9,12 @@ namespace Hauptumgebung
 {
     public class Sprachausgabe 
     {
-       
-
+       void speech()
+        {
+            Form1 frm = new Form1();
+            frm.synth.Speak("a");
+        }
+        
         
 
         

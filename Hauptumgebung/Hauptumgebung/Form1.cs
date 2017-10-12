@@ -13,10 +13,11 @@ namespace Hauptumgebung
 {
     public partial class Form1 : Form
     {
+        public SpeechSynthesizer synth = new SpeechSynthesizer();
+
         public Form1()
         {
             InitializeComponent();
-            SpeechSynthesizer synth = new SpeechSynthesizer();
             synth.SetOutputToDefaultAudioDevice();
 
 
