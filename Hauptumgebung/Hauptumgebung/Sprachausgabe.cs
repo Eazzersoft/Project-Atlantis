@@ -9,7 +9,7 @@ namespace Hauptumgebung
 {
     public class Sprachausgabe 
     {
-       publicSpeechSynthesizer synth = new SpeechSynthesizer();
+       public static SpeechSynthesizer synth = new SpeechSynthesizer();
 
         
 

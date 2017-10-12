@@ -15,6 +15,7 @@ namespace Hauptumgebung
         public Form1()
         {
             InitializeComponent();
+            Sprachausgabe.synth 
             
         }
 
