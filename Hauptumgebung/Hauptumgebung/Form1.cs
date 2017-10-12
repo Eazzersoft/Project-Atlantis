@@ -24,7 +24,7 @@ namespace Hauptumgebung
             InitializeComponent();
             synth.SetOutputToDefaultAudioDevice();
 
-            MessageBox.Show("Sie wurden gehackt!");
+            
 
 
 
