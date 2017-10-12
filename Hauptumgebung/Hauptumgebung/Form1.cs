@@ -16,7 +16,7 @@ namespace Hauptumgebung
         public Form1()
         {
             InitializeComponent();
-            public static SpeechSynthesizer synth = new SpeechSynthesizer();
+            SpeechSynthesizer synth = new SpeechSynthesizer();
             synth.SetOutputToDefaultAudioDevice();
 
 

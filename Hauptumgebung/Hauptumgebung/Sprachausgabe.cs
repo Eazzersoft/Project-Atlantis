@@ -9,7 +9,7 @@ namespace Hauptumgebung
 {
     public class Sprachausgabe 
     {
-       Form1.synth.Speak
+       
 
         
 
