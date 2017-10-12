@@ -17,9 +17,10 @@ namespace Hauptumgebung
 
         static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
+            
             if (e.Result.Text == "Hallo")
             {
-            
+                Sprachausgabe.speech1();
             }
 
 

@@ -15,7 +15,7 @@ namespace Hauptumgebung
             frm.synth.Speak(Form1.output);
         }
 
-        void speech1()
+        public static void speech1()
         {
             Form1 frm = new Form1();
             frm.synth.Speak("hallo");
