@@ -7,9 +7,11 @@ using System.Speech.Synthesis;
 
 namespace Hauptumgebung
 {
-    class Sprachausgabe
+    public class Sprachausgabe 
     {
         SpeechSynthesizer synth = new SpeechSynthesizer();
+
+       
 
 
 
