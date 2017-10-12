@@ -7,10 +7,10 @@ using System.Speech.Recognition;
 
 namespace Hauptumgebung
 {
-    public class Sprach_Verstehen
+    public static class Sprach_Verstehen
     {
 
-        static void Sprachezutext(string[] args)
+        public static void Sprachezutext(string[] args)
         {
             SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine( new System.Globalization.CultureInfo("de-DE"));
         }

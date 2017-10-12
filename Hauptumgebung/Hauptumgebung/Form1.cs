@@ -25,7 +25,8 @@ namespace Hauptumgebung
         {
             InitializeComponent();
             synth.SetOutputToDefaultAudioDevice();
-            
+
+           Sprach_Verstehen.Sprachezutext();
 
 
 
