@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
 using System.Diagnostics;
-
+using System.Threading;
 
 namespace Hauptumgebung
 {
@@ -19,19 +19,15 @@ namespace Hauptumgebung
        public static int Spracherkennunganaus;
         
 
-        public SpeechSynthesizer synth = new SpeechSynthesizer();
+       
 
         public Form1()
         {
             InitializeComponent();
-            synth.SetOutputToDefaultAudioDevice();
+            
 
-           Sprach_Verstehen.Sprachezutext();
+            
 
-            if (Spracherkennunganaus == 1)
-            {
-                Sprach_Verstehen.Sprachezutext();
-            }
 
 
 
@@ -41,7 +37,7 @@ namespace Hauptumgebung
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -96,6 +92,11 @@ namespace Hauptumgebung
         public static void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            new Thread(new ThreadStart(Sprach_Verstehen.Sprachezutext)).Start();
         }
     }
 }

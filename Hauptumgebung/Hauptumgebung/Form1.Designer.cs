@@ -74,7 +74,7 @@
             this.label1.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(120, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(412, 65);
+            this.label1.Size = new System.Drawing.Size(415, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "Eazzersoft - BOB";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -176,6 +176,7 @@
             this.Name = "Form1";
             this.Text = "Eazzersoft - AI";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

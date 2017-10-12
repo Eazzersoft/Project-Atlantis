@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Speech.Recognition;
+using System.Speech.Synthesis;
+using System.Threading;
+
 
 namespace Hauptumgebung
 {
@@ -12,18 +15,34 @@ namespace Hauptumgebung
 
         public static void Sprachezutext()
         {
-             
-            SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine( new System.Globalization.CultureInfo("de-DE"));
+            
+            using (SpeechRecognitionEngine hoerer = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("de-DE")))
+            {
+                
+                hoerer.LoadGrammar(new DictationGrammar());
 
-                                    
+                hoerer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+
+                hoerer.SetInputToDefaultAudioDevice();
+
+               while (true)
+                {
+                    hoerer.Recognize();
+                }
+                
+            }
+
+
         }
 
         public static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             
-            if (e.Result.Text == "e")
+            if (e.Result.Text == "Hallo")
             {
-                Sprachausgabe.speech1();
+                SpeechSynthesizer synth = new SpeechSynthesizer();
+                synth.SetOutputToDefaultAudioDevice();
+                synth.Speak("hallo");
             }
 
 
