@@ -26,8 +26,7 @@ namespace Hauptumgebung
             InitializeComponent();
 
 
-            SpeechSynthesizer synth = new SpeechSynthesizer();
-            synth.Speak("Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen  ");
+            
 
 
 
@@ -96,6 +95,8 @@ namespace Hauptumgebung
 
         private void Form1_Shown(object sender, EventArgs e)
         {
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.Speak("Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen  ");
             new Thread(new ThreadStart(Sprach_Verstehen.Sprachezutext)).Start();
         }
     }
