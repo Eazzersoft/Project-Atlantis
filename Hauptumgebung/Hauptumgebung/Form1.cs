@@ -24,10 +24,10 @@ namespace Hauptumgebung
         public Form1()
         {
             InitializeComponent();
-            
 
-            
 
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.Speak("Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen Multiplikationszeichen  ");
 
 
 

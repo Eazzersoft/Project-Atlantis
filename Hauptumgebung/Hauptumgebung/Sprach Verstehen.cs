@@ -48,7 +48,7 @@ namespace Hauptumgebung
                 synth.Speak("Wie kann ich dir helfen?");
                 Form1.hathallogesagt = false;
                 
-                new Thread(new ThreadStart(Sprach_Verstehen.Sprachezutext1));
+                new Thread(new ThreadStart(Sprach_Verstehen.Sprachezutext));
                 //muss fertig gemacht werden geht nicht muss aber die void nachhallo starten in neuem thread fehler googeln
 
 
