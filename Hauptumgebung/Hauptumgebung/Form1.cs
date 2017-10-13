@@ -17,7 +17,7 @@ namespace Hauptumgebung
     public partial class Form1 : Form
     {
        public static int Spracherkennunganaus;
-        
+       public static bool hathallogesagt = false; 
 
        
 

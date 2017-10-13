@@ -12,27 +12,27 @@ namespace Hauptumgebung
 {
     public static class Sprach_Verstehen
     {
-        
-       
+
+
 
 
         public static void Sprachezutext()
         {
-            
+
             using (SpeechRecognitionEngine hoerer = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("de-DE")))
             {
-                
+
                 hoerer.LoadGrammar(new DictationGrammar());
 
                 hoerer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
 
                 hoerer.SetInputToDefaultAudioDevice();
 
-               while (true)
+                while (true)
                 {
                     hoerer.Recognize();
                 }
-                
+
             }
 
 
@@ -40,7 +40,7 @@ namespace Hauptumgebung
 
         public static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            
+
             if (e.Result.Text == "Hallo")
             {
                 SpeechSynthesizer synth = new SpeechSynthesizer();
@@ -52,28 +52,73 @@ namespace Hauptumgebung
 
         }
 
-        public static void Wiekannichhelfen(object sender, SpeechRecognizedEventArgs e)
+
+
+    }
+
+
+
+    public static class allesdanch
         {
-            
-            if()
+
+        public static void Sprachezutext()
+        {
+
+            using (SpeechRecognitionEngine hoerer = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("de-DE")))
             {
-                if(e.Result.Text == "Einstellungen")
+
+                hoerer.LoadGrammar(new DictationGrammar());
+
+                hoerer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+
+                hoerer.SetInputToDefaultAudioDevice();
+
+                while (true)
                 {
-                    SpeechSynthesizer synth = new SpeechSynthesizer();
-                    synth.SetOutputToDefaultAudioDevice();
-                    synth.Speak("Ich öffne die Einstellungen");
-
-
-
+                    hoerer.Recognize();
                 }
-
-
 
             }
 
 
+        }
 
+        public static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+
+            if (e.Result.Text == "Hallo")
+            {
+                SpeechSynthesizer synth = new SpeechSynthesizer();
+                synth.SetOutputToDefaultAudioDevice();
+                synth.Speak("Wie kann ich dir helfen?");
+
+
+            }
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
 }
+
