@@ -28,7 +28,7 @@ namespace Hauptumgebung
 
                 hoerer.SetInputToDefaultAudioDevice();
 
-                while (true)
+                while (Form1.hathallogesagt == false)
                 {
                     hoerer.Recognize();
                 }
@@ -46,9 +46,15 @@ namespace Hauptumgebung
                 SpeechSynthesizer synth = new SpeechSynthesizer();
                 synth.SetOutputToDefaultAudioDevice();
                 synth.Speak("Wie kann ich dir helfen?");
+                Form1.hathallogesagt = false;
+                
+                new Thread(new ThreadStart(Sprach_Verstehen.Sprachezutext1));
+                //muss fertig gemacht werden geht nicht muss aber die void nachhallo starten in neuem thread fehler googeln
+
 
 
             }
+
 
         }
 
@@ -57,11 +63,9 @@ namespace Hauptumgebung
     }
 
 
-
-    public static class allesdanch
-        {
-
-        public static void Sprachezutext()
+    public static class nachhallo
+    {
+        public static void Sprachezutext1()
         {
 
             using (SpeechRecognitionEngine hoerer = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("de-DE")))
@@ -69,7 +73,7 @@ namespace Hauptumgebung
 
                 hoerer.LoadGrammar(new DictationGrammar());
 
-                hoerer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+                hoerer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer1_SpeechRecognized);
 
                 hoerer.SetInputToDefaultAudioDevice();
 
@@ -83,7 +87,7 @@ namespace Hauptumgebung
 
         }
 
-        public static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        public static void recognizer1_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
 
             if (e.Result.Text == "Hallo")
@@ -97,28 +101,29 @@ namespace Hauptumgebung
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
 
