@@ -12,6 +12,9 @@ namespace Hauptumgebung
 {
     public static class Sprach_Verstehen
     {
+        
+       
+
 
         public static void Sprachezutext()
         {
@@ -42,13 +45,35 @@ namespace Hauptumgebung
             {
                 SpeechSynthesizer synth = new SpeechSynthesizer();
                 synth.SetOutputToDefaultAudioDevice();
-                synth.Speak("hallo");
+                synth.Speak("Wie kann ich dir helfen?");
+
+
+            }
+
+        }
+
+        public static void Wiekannichhelfen(object sender, SpeechRecognizedEventArgs e)
+        {
+            
+            if()
+            {
+                if(e.Result.Text == "Einstellungen")
+                {
+                    SpeechSynthesizer synth = new SpeechSynthesizer();
+                    synth.SetOutputToDefaultAudioDevice();
+                    synth.Speak("Ich öffne die Einstellungen");
+
+
+
+                }
+
+
+
             }
 
 
 
 
         }
-
     }
 }
